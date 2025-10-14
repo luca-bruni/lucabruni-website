@@ -1,0 +1,109 @@
+/* page */
+
+:root {
+    --background-color: #CECECE; /* default grey */
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+body {
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+/* table */
+
+table {
+    border: solid 1px gray;
+    border-spacing: 2px;
+    font-weight: normal;
+    width: 70%;
+    margin: auto;
+}
+
+th {
+    display: table-cell;
+    border: solid 1px;
+    padding: 5px;
+}
+
+/***********************************************/
+
+.no-style-link,
+.no-style-link:visited,
+.no-style-link:hover,
+.no-style-link:active {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.splash-page-body {
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.splash-list {
+    display: grid;
+    gap: 20px;
+}
+
+.about-page-body {
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.resume-page-table td {
+    border: 1px solid black;
+    padding: 15px;
+}
+
+/* alternating table */
+
+.project-table table {
+    border: none;
+    width: 50%;
+    table-layout: fixed;
+}
+.project-table td {
+    border: 1px solid black;
+    padding: 15px;
+    text-align: left;
+}
+
+.alt-wide-left td:first-child {
+    width: 70%;
+}
+.alt-wide-left td:last-child {
+    width: 30%;
+}
+
+.alt-wide-right td:first-child {
+    width: 30%;
+}
+.alt-wide-right td:last-child {
+    width: 70%;
+}
+
+.project-heading {
+    padding-bottom: 5%;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.software-page-table td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+}
