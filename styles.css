@@ -107,3 +107,18 @@ th {
     padding: 5px;
     text-align: left;
 }
+
+table.contact-page-table {
+    width: max-content;
+}
+
+.contact-page-table td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+}
+
+.contact-page-table td img {
+  vertical-align: middle;
+  margin-right: 5px;
+}
