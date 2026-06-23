@@ -76,6 +76,20 @@ table {
     display: block;
 }
 
+@media (max-width: 600px) {
+    .gallery-page-table,
+    .gallery-page-table tbody,
+    .gallery-page-table tr {
+        display: block;
+    }
+
+    .gallery-page-table td {
+        display: inline-block;
+        width: 48%;
+        vertical-align: top;
+    }
+}
+
 /* alternating project layout */
 .project-page-table table {
     border: none;
