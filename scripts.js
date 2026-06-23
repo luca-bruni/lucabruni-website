@@ -1,37 +1,29 @@
-function loadNav() {
-    document.addEventListener('DOMContentLoaded', () => {
-        fetch('nav.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('nav-container').innerHTML = html;
+function loadFragment(url, containerId, onLoad) {
+    fetch(url)
+        .then(r => {
+            if (!r.ok) throw new Error(`${r.status} loading ${url}`);
+            return r.text();
         })
-        .catch(err => console.error('Error loading nav:', err));
-    });
+        .then(html => {
+            const el = document.getElementById(containerId);
+            if (!el) throw new Error(`#${containerId} not found`);
+            el.innerHTML = html;
+            if (onLoad) onLoad();
+        })
+        .catch(err => console.error(err));
 }
 
-function loadFooter() {
-    document.addEventListener('DOMContentLoaded', () => {
-        fetch('footer.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('footer-container').innerHTML = html;
-            populateFooterButtons();
-        })
-        .catch(err => console.error('Error loading footer:', err));
-    });
-}
+document.addEventListener('DOMContentLoaded', () => {
+    loadFragment('nav.html', 'nav-container');
+    loadFragment('footer.html', 'footer-container', populateFooterButtons);
+});
 
 function populateFooterButtons() {
-    const numButtons = 5;
-    const maxIndex = 79; /* For now */
-  
     const container = document.getElementById('button-container');
-    for (let i = 0; i < numButtons; ++i) {
-      let randomIndex = Math.floor(Math.random() * maxIndex);
-  
-      const img = document.createElement('img');
-      img.src = "assets/buttons/" + randomIndex.toString() + ".gif";
-      img.style = "padding: 2px";
-      container.appendChild(img);
+    if (!container) return;
+    for (let i = 0; i < 5; i++) {
+        const img = document.createElement('img');
+        img.src = `assets/buttons/${Math.floor(Math.random() * 80)}.gif`;
+        container.appendChild(img);
     }
 }

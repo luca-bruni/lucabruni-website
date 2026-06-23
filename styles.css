@@ -1,19 +1,16 @@
 /* page */
 
 :root {
-    --background-color: #CECECE; /* default grey */
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-content: flex-start;
+    --background-color: #CECECE;
 }
 
 body {
+    margin: 0;
+    padding: 0;
     text-align: center;
     background-color: var(--background-color);
 }
 
-/* header/footer */
 .divider-bar {
     width: 80%;
 }
@@ -22,62 +19,54 @@ body {
     vertical-align: middle;
 }
 
-/* global table */
+#button-container img {
+    padding: 2px;
+}
+
+/* global table defaults */
 table {
     width: 70%;
     margin: auto;
 }
 
-
-
 /***********************************************/
 
-/* tables */
+/* navigation and data tables */
 .nav-table,
-.resume-page-table,
-.software-page-table,
-.contact-page-table {
-    border: solid 1px gray;
+.data-table {
+    border: 1px solid gray;
     border-spacing: 2px;
     font-weight: normal;
 }
 
-.gallery-page-table {
-    border: none;
-}
-
-.contact-page-table {
-    width: max-content;
-}
-
 .nav-table th,
-.resume-page-table th,
-.software-page-table th {
-    display: table-cell;
-    border: solid 1px;
+.data-table th {
+    border: 1px solid;
     padding: 5px;
 }
 
-.resume-page-table td {
+.data-table td {
     border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+}
+
+.data-table.resume td {
     padding: 15px;
 }
 
-.software-page-table td {
-    border: 1px solid black;
-    padding: 5px;
-    text-align: left;
+.data-table.contact {
+    width: max-content;
 }
 
-.contact-page-table td {
-    border: 1px solid black;
-    padding: 5px;
-    text-align: left;
+.data-table.contact img {
+    vertical-align: middle;
+    margin-right: 5px;
 }
 
-.contact-page-table img {
-  vertical-align: middle;
-  margin-right: 5px;
+/* gallery */
+.gallery-page-table {
+    border: none;
 }
 
 .gallery-page-table img {
@@ -87,55 +76,43 @@ table {
     display: block;
 }
 
-/* alternating table */
+/* alternating project layout */
 .project-page-table table {
     border: none;
     width: 50%;
     table-layout: fixed;
 }
+
 .project-page-table td {
     border: 1px solid black;
     padding: 15px;
     text-align: left;
 }
-.alt-wide-left td:first-child {
-    width: 70%;
-}
-.alt-wide-left td:last-child {
-    width: 30%;
-}
-.alt-wide-right td:first-child {
-    width: 30%;
-}
-.alt-wide-right td:last-child {
-    width: 70%;
-}
+
+.alt-wide-left td:first-child  { width: 70%; }
+.alt-wide-left td:last-child   { width: 30%; }
+.alt-wide-right td:first-child { width: 30%; }
+.alt-wide-right td:last-child  { width: 70%; }
 
 /* links */
 .no-style-link,
 .no-style-link:visited,
 .no-style-link:hover,
 .no-style-link:active {
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.splash-page-body {
+/* page body (text-heavy pages) */
+.page-body {
     text-align: left;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 0 10%;
 }
 
 .splash-list {
     display: grid;
     gap: 20px;
-}
-
-.about-page-body {
-    text-align: left;
-    margin-left: 10%;
-    margin-right: 10%;
 }
 
 .project-heading {
