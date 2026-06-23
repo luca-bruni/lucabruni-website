@@ -19,6 +19,10 @@ body {
     vertical-align: middle;
 }
 
+#button-container img {
+    padding: 2px;
+}
+
 /* global table defaults */
 table {
     width: 70%;
@@ -27,25 +31,15 @@ table {
 
 /***********************************************/
 
-/* navigation table */
-.nav-table {
-    border: 1px solid gray;
-    border-spacing: 2px;
-    font-weight: normal;
-}
-
-.nav-table th {
-    border: 1px solid;
-    padding: 5px;
-}
-
-/* data tables (resume, software, contact) */
+/* navigation and data tables */
+.nav-table,
 .data-table {
     border: 1px solid gray;
     border-spacing: 2px;
     font-weight: normal;
 }
 
+.nav-table th,
 .data-table th {
     border: 1px solid;
     padding: 5px;
