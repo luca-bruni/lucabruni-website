@@ -78,15 +78,18 @@ table {
 
 @media (max-width: 600px) {
     .gallery-page-table,
-    .gallery-page-table tbody,
-    .gallery-page-table tr {
+    .gallery-page-table tbody {
         display: block;
+        width: 100%;
+    }
+
+    .gallery-page-table tr {
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .gallery-page-table td {
-        display: inline-block;
-        width: 48%;
-        vertical-align: top;
+        width: 50%;
     }
 }
 
